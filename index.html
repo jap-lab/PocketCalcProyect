@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="StyleSheet" href="normalize.css"   type="text/css" media="screen">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DotGothic16&family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Gruppo&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Gruppo&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/1634925f71.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="styles.css" type="text/css" media="screen">
+    <title>Pocket Calc</title>
+    <link rel="icon"  class="icon" href="/icons/icons8-calculadora-16.png">
+</head>
+<body>
+    <div class="wrapper">
+        <header>
+        </header>
+        <main>
+            <h1>Pocket Calc
+                <i class="fa-solid fa-calculator"></i>    
+            </h1>
+            <div class="simpleCalc">
+                <div class = "dock" id="dashBoard">
+                    <div class="display">
+                        <input type="text" title="visor" name="calcDisplay" id="puka">
+                        <p class="memoryTag" id="memoryTag">M</p>
+                    </div>
+                </div>
+                <div class="keyboard">
+                    <!--dígitos-->
+                    <!-- <div class="upSideCommands"> -->
+                        <button class="command" id="memoryAdd">M&#43;</button>
+                        <button class="command" id="memorySubstract">M&#45;</button>
+                        <button class="command" id="memoryClear">MCR</button>
+                        <button class="command" id="delete">&larr;</button>
+                        <button class="command" id="clearAll">AC</button>
+                    <!-- </div> -->
+                    <!-- <div class="numberKeys"> -->
+                        <button class="number" id="seven">7</button>
+                        <button class="number" id="eight">8</button>
+                        <button class="number" id="nine">9</button>
+                        <button class="operator" id="squared">x&sup2;</button>
+                        <button class= "operator" id="squaredRoot">&radic;</button>
+                        <button class="number" id="four">4</button>
+                        <button class="number" id="five">5</button>
+                        <button class="number" id="six">6</button>
+                        <button class="operator" id="multiply">&#42;</button>
+                        <button class="operator" id="divide">&divide;</button>
+                        <button class= "number" id="one">1</button>
+                        <button class= "number" id="two">2</button>
+                        <button class= "number" id="three">3</button>
+                        <button class="operator" id="add">&#43;</button>
+                        <button class="operator" id="substract">&#45;</button>
+                        <button class ="number" id="zero">0</button>
+                        <button class ="number" id="comma">&#44;</button>
+                        <button class="operator" id="equals">&#61;</button>
+                    <!-- </div> -->
+                    <!--comandos-->
+                    <!-- <div class="rightSideCommands"> -->
+                    <!-- </div> -->
+                </div>
+            </div>
+            <script src="app.js"></script>
+        </main>
+        <footer>
+            <a target="_blank" href="https://icons8.com/icon/85903/calculadora">Calculadora</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a>
+            
+        </footer>
+    </div><!--fin del wrapper-->
+</body>
+</html>

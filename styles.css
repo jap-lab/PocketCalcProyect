@@ -1,0 +1,357 @@
+/*dimensiones definidas en pixeles css: 1pxcss =96/2.54cm*/
+/* 360×640 (móvil pequeño): 22,64%.
+375×667 (móvil medio): 5%.
+720×1280 (móvil grande): 2,74%.
+1366×768 (ordenador portátil medio): 11,98%.
+1440×900 (escritorio medio): 3,17%.
+1920×1080 (escritorio grande): 7,35%.
+Copiado de: https://www.jluislopez.es/ */
+
+
+
+/* breakpoints más comunes
+@media all and (min-width:1200px){ … }
+@media all and (min-width: 960px) and (max-width: 1199px) { … }
+@media all and (min-width: 768px) and (max-width: 959px) { … }
+@media all and (min-width: 480px) and (max-width: 767px){ … }
+@media all and (max-width: 479px) { … } */
+/* 
+
+Movil:280 x 653
+Móvil: 360 x 640
+Móvil: 375 x 667
+Móvil: 360 x 720
+iPhone X: 375 x 812
+Pixel 2: 411 x 731
+Tableta: 768 x 1024
+Un ordenador portátil: 1366 x 768
+Un ordenador portátil o desktop de alta resolución: 1920 x 1080 */
+
+/*colores y dimensiones mínimas*/
+
+/* body{
+    display: flex;
+    flex-direction: column;
+} */
+/*fuente para el display font-family: 'DotGothic16', sans-serif;
+font-family: 'Orbitron', sans-serif;*/
+:root{
+    font-size: 62.5%;
+    /*pallet of Hexadecimal: #0c7359*/
+    /*mixed color a:000000*/
+    /*mixed color b:11a37e*/
+    
+    --dark-green: #003a1e;
+    --light-green:#11a37e;
+    --dark-gray:#40554e;
+    --light-gray:gray;
+    --display-font: 'Quicksand', sans-serif;
+    --button-font: 'Orbitron', sans-serif;
+    --bold:700;
+    --regular:400;
+
+}
+html{
+    height: 100%;
+}
+
+main{
+    width: 100%;
+    height: 100%;
+    background-color: deeppink;
+    margin: 0;
+}
+
+body{
+    height: 100%;
+    margin: 0;
+}
+
+
+.wrapper{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;;
+    height: 100%;
+   
+
+}
+header{
+    background-color: darkturquoise;
+    height: 5rem;
+    width: 100%;
+    /* background-color: orange; */
+}
+h1{
+    
+    text-align: center;
+    font-size: 4rem;
+    line-height: 1rem;
+    font-family: 'Lato', sans-serif;
+    /**/
+    text-shadow: -4px 4px 10px black;
+    color: white;
+    font-weight: 400;
+}
+
+.simpleCalc{
+    margin: 1rem;
+    max-width: 35rem;
+    background-color: black;
+    box-shadow: -8px 10px 40px rgba(9, 41,46,50);
+    background:linear-gradient(45deg,#4ff1f0, #3aadac 86%);
+    border-radius: 5px;
+    margin-bottom: 4rem;
+}
+
+.keyboard{
+    display: grid;
+    row-gap: .5rem;
+}
+.operator{
+    background: linear-gradient(180deg, darkgray, transparent);
+}
+
+button{
+    min-width: 3.2rem;
+    min-height: 3.2rem;
+    width: 100%;
+    height: auto;
+    color: white;
+    font-family: var(--button-font);
+    font-size: 1.4rem;
+    border-radius: 5px;
+    border-width: .002rem;
+    
+    
+    
+}
+.dock{
+    margin-top: 1rem;
+    margin-bottom: 2.2rem;
+    height: 10rem;
+}
+.display{
+    position: fixed;
+    left: 1rem;
+    right: 1rem;
+}
+input{
+    /* min-width: 56px; */
+    box-sizing: border-box;
+    min-width: 3.2rem;
+    width: 100%;
+    min-height: 8rem;
+    height: 100%;
+    text-align: right;
+    background-color: var(--light-gray);
+    font-family: var(--display-font);
+    font-size: 5rem;
+    letter-spacing: .2rem;
+    padding-left: 1.5rem;
+    padding-top: 1.5rem;
+    font-weight: 200;
+    border: none;
+    border-radius: 2px;
+    background: linear-gradient(45deg, #b4b3b3 60%, transparent);
+    color:rgb(97,101,115);
+    
+}
+
+.memoryTag{
+
+    margin-top: -7.8rem;
+    margin-left: 0.5rem;
+    font-family: var(--display-font);
+    font-size: 2.5rem;
+    font-style: italic;
+    color: rgb(75,78,88);
+}
+
+@media(min-width: 280px){
+
+ 
+    .simpleCalc{
+        border: none;
+        padding: 1rem;
+        margin-right: auto;
+        margin-left: auto;
+        
+
+    }
+    .dock{
+        height: 4rem;
+    }
+    .display{
+        position: unset;
+        height: 100%;
+    }
+/* 
+    .memoryTag{
+        /* margin-top: -8rem; */
+  /*  } */
+
+    .keyboard{
+        
+        margin-top: 8rem;
+        grid-template-areas:"mAdd mclr clr"
+                            "mSubst del sqrt"
+                            "squared divide mul"
+                            "subst ad eqs"
+                            "seven eight nine"
+                            "four five six"
+                            "one two three"
+                            "cero comma break";
+        grid-gap: .5rem;
+    }
+    #memoryAdd{
+        grid-area: mAdd;
+    }
+    #memoryClear{
+        grid-area: mclr;
+    }
+    #clearAll{
+        grid-area: clr;
+    }
+    #memorySubstract{
+        grid-area: mSubst;
+    }
+    #delete{
+        grid-area: del;
+    }
+    #squared{
+        grid-area: squared;
+    }
+    #squaredRoot{
+        grid-area: sqrt;
+    }
+    
+    #divide{
+        grid-area: divide;
+    
+    }
+    #multiply{
+        grid-area: mul;
+    }
+    #substract{
+        grid-area: subst;
+    }
+    #add{
+        grid-area:ad;
+    }
+    #equals{
+        grid-area: eqs;
+    }
+    
+    
+    #comma{
+        grid-area: comma;
+    }
+    
+    #zero{
+        grid-area: cero;
+        
+    }
+    
+    button[id="one"]{
+        grid-area:one;
+    }
+    button[id="two"]{
+        grid-area: two;
+    }
+    button[id="three"]{
+        grid-area: three;
+    }
+    button[id="four"]{
+        grid-area: four;
+    }
+    button[id="five"]{
+        grid-area: five;
+    }
+    button[id="six"]{
+        grid-area: six;
+    }
+    button[id="seven"]{
+        grid-area: seven;
+    }
+    button[id="eight"]{
+        grid-area: eight;
+    }
+    button[id="nine"]{
+        grid-area: nine;
+    }
+}
+
+@media(min-width: 480px){
+
+    .keyboard{
+        grid-template-areas:"mAdd mSubst mclr clr"
+                            "del sqrt squared divide "
+                            "seven eight nine mul"
+                            "four five six ad "
+                            "one two three subst"
+                            "cero comma break eqs";        
+    }
+
+}
+
+#errNode{
+    color: white;
+    background: radial-gradient(red, transparent);
+    position: relative;
+    border: 0;
+    margin: auto;
+    margin-top: 2.3rem;
+    margin-bottom: -5rem;
+    max-width: max-content;
+    position: relative;
+    text-align: center;
+    font-size: medium;
+    font-family: var(--display-font);
+    font-weight: 200;
+    
+}
+.command{
+
+    background-color: rgb(97,117,120);
+}
+.number{
+
+    background-color: rgb(252,193,154);
+}
+#clearAll{
+    background-color: rgb(222,120,143);
+
+}
+
+footer{
+    width: 100%;
+    height: 5rem;
+    background-color: darkturquoise;
+    
+}
+
+i{
+    font-size: 3.5rem;
+    color: yellow;
+}
+
+a{
+    color: white;
+    font-family: var(--display-font);
+    margin-left: 2rem;
+
+}
+a+a{
+    margin-left: .5rem;;
+    color: white;
+    font-family: var(--display-font);
+}
+
+
+
+
+
