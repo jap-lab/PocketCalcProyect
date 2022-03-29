@@ -255,7 +255,6 @@ input{
         grid-area: cero;
         
     }
-    
     button[id="one"]{
         grid-area:one;
     }
